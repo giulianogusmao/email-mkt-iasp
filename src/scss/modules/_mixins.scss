@@ -1,0 +1,118 @@
+﻿
+// =============================================================================================
+%vertical-center {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+%nowrap {
+  white-space: nowrap;
+}
+
+%noselect {
+  user-select: none;
+}
+
+%nolist-style {
+  list-style: none;
+}
+
+%list-inline {
+  ul {
+    padding: 0;
+    margin: 0;
+
+    li {
+      @extend %nolist-style;
+      display: inline-block;
+    }
+  }
+}
+
+%transition {
+    transition: all .3s ease-in-out;
+}
+
+%transition-fast {
+    transition: all .1s ease-in-out;
+}
+
+%transition-fast-linear {
+    transition: all .1s linear;
+}
+
+%transition-slow {
+    transition: all .6s ease-in-out;
+}
+
+// =============================================================================================
+@mixin setImageHeight($image, $width, $height, $proporcao: 1) {
+    width: $width * $proporcao;
+    height: $height * $proporcao;
+    background-image: url($image);
+    padding: $height * $proporcao 0 0 0; /* padding-top=altura imagem */
+    height /**/:$height * $proporcao; /* height=altura imagem - hack IE5's */
+}
+
+// =============================================================================================
+
+@mixin media-breakpoint-up($media) {
+  @if $media == xs {
+    @media (min-width: $screen-xs-min) { @content; }
+  } 
+  @else if $media == sm {
+    @media (min-width: $screen-sm-min) { @content; }
+  } 
+  @else if $media == md {
+    @media (min-width: $screen-md-min) { @content; }
+  } 
+  @else if $media == lg {
+    @media (min-width: $screen-lg-min) { @content; }
+  } 
+  @else {
+    @media (min-width: $screen-xl-min) { @content; }
+  }
+}
+
+@mixin media-breakpoint-down($media) {
+  @if $media == xs {
+    @media (max-width: $screen-xs-max) { @content; }
+  } 
+  @else if $media == sm {
+    @media (max-width: $screen-sm-max) { @content; }
+  } 
+  @else if $media == md {
+    @media (max-width: $screen-md-max) { @content; }
+  } 
+  @else if $media == lg {
+    @media (max-width: $screen-lg-max) { @content; }
+  } 
+  @else {
+    @media (min-width: $screen-xl-min) { @content; }
+  }
+}
+
+@mixin media-breakpoint-only($media) {
+  @if $media == xs {
+    @media (max-width: $screen-xs-max) { @content; }
+  } 
+  @else if $media == sm {
+    @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) { @content; }
+  } 
+  @else if $media == md {
+    @media (min-width: $screen-md-min) and (max-width: $screen-md-max) { @content; }
+  } 
+  @else if $media == lg {
+    @media (min-width: $screen-lg-min) and (max-width: $screen-lg-max) { @content; }
+  } 
+  @else {
+    @media (min-width: $screen-xl-min) { @content; }
+  }
+}
+
+// shadow
+
+@mixin box-shadow-focus($color) {
+    box-shadow: 0 0 0 .2rem rgba($color, .5);
+}

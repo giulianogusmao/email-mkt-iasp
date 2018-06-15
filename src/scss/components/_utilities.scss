@@ -1,0 +1,30 @@
+/*
+  Utilidades
+*/
+
+/*
+  Cores VIVO
+*/
+@for $i from 1 through length($colors-vivo) {
+  .pti-color-vivo-#{$i} {
+    color: nth($colors-vivo, $i);
+  }
+
+  .pti-bg-vivo-#{$i} {
+    background-color: nth($colors-vivo, $i);
+  }
+}
+
+
+// /*
+//   Cores black
+// */
+// @for $i from 1 through length($colors-black) {
+//   .pti-color-black-#{$i}0 {
+//     color: nth($colors-black, $i);
+//   }
+
+//   .pti-bg-black-#{$i}0 {
+//     background-color: nth($colors-black, $i);
+//   }
+// }

@@ -1,0 +1,138 @@
+﻿
+// =============================================================================================
+// PASTAS
+
+$url-path-assets: "assets/";
+$url-path-node: "node_modules/";
+$url-path-image: "img/";
+
+// =============================================================================================
+// FONTE
+
+$url-path-fontes: "../fonts/Telefonica"; // desenvolvimento
+$family: "TelefonicaWeb";
+$fontes: "Light", "Regular", "RegularItalic", "Bold";
+
+$font-light: '#{$family}-Light';
+$font-regular: '#{$family}-Regular';
+$font-italic: '#{$family}-RegularItalic';
+$font-bold: '#{$family}-Bold';
+$font-outras: 'Helvetica Neue, Helvetica, Arial, sans-serif';
+
+%font-light { font-family: '#{$font-light}', #{$font-outras}; }
+%font-regular { font-family: '#{$font-regular}', #{$font-outras}; }
+%font-italic { font-family: '#{$font-italic}', #{$font-outras}; }
+%font-bold { font-family: '#{$font-bold}', #{$font-outras}; }
+
+// fonts size
+$font-size-reset: 62.5% !default;
+$font-size: 1.5rem !default;
+
+$project-name: 'pti-main';
+
+
+// =============================================================================================
+// CORES
+
+// escala de cinza
+$cor-black-1:   #000000;
+$cor-black-900: #212121;
+$cor-black-800: #424242;
+$cor-black-700: #616161;
+$cor-black-600: #757575;
+$cor-black-500: #9E9E9E;
+$cor-black-400: #BDBDBD;
+$cor-black-300: #E0E0E0;
+$cor-black-200: #EEEEEE;
+$cor-black-100: #F5F5F5;
+$cor-black-50:  #FAFAFA;
+$cor-black-0:   #FFFFFF;
+$cor-white: $cor-black-0;
+
+// cores telefonica
+$cor-vivo-10: #022231;
+$cor-vivo-9: #003245;
+$cor-vivo-8: #054051;
+$cor-vivo-7: #074d5f;
+$cor-vivo-6: #0f5c6f;
+$cor-vivo-5: #156c7d;
+$cor-vivo-4: #137a8b;
+$cor-vivo-3: #1a8b9c;
+$cor-vivo-2: #309fb1;
+$cor-vivo-1: #00c6da;
+$cor-default: $cor-vivo-1;
+$colors-vivo: (
+  $cor-vivo-1,
+  $cor-vivo-2,
+  $cor-vivo-3,
+  $cor-vivo-4,
+  $cor-vivo-5,
+  $cor-vivo-6,
+  $cor-vivo-7,
+  $cor-vivo-8,
+  $cor-vivo-9,
+  $cor-vivo-10
+);
+
+// cores bootstrap
+$cor-bootstrap-primary: #337ab7;
+$cor-bootstrap-danger: #d9534f;
+$cor-bootstrap-warning: #f0ad4e;
+$cor-bootstrap-info: #5bc0de;
+$cor-bootstrap-success: #5cb85c;
+
+// cores tema
+$cor-dark: $cor-black-800;
+$cor-light: $cor-black-200;
+$cor-primary: $cor-vivo-1;
+$cor-danger: $cor-bootstrap-danger;
+$cor-warning: $cor-bootstrap-warning;
+$cor-info: $cor-bootstrap-info;
+$cor-success: $cor-bootstrap-success;
+
+// cores light
+$cor-dark-light: lighten($cor-dark, 10);
+$cor-light-light: lighten($cor-light, 10);
+$cor-primary-light: lighten($cor-primary, 10);
+$cor-danger-light: lighten($cor-danger, 10);
+$cor-warning-light: lighten($cor-warning, 10);
+$cor-info-light: lighten($cor-info, 10);
+$cor-success-light: lighten($cor-success, 10);
+
+// cores dark
+$cor-dark-dark: darken($cor-dark, 10);
+$cor-light-dark: darken($cor-light, 10);
+$cor-primary-dark: darken($cor-primary, 10);
+$cor-danger-dark: darken($cor-danger, 10);
+$cor-warning-dark: darken($cor-warning, 10);
+$cor-info-dark: darken($cor-info, 10);
+$cor-success-dark: darken($cor-success, 10);
+
+// cores fontes
+$cor-text: $cor-black-800 !default;
+
+$border-color: rgba(0,0,0,.125);
+$border-style: 'solid';
+$border-weight: '1px';
+$border: #{$border-weight} #{$border-style} $border-color;
+
+
+// =============================================================================================
+// screen
+
+$screen-xs-max: 576px;
+$screen-sm-min: 577px;
+$screen-sm-max: 767px;
+$screen-md-min: 768px;
+$screen-md-max: 991px;
+$screen-lg-min: 992px;
+$screen-lg-max: 1199px;
+$screen-xl-min: 1200px;
+
+$screen-max: 1400px;
+
+
+
+// menu
+$screen-menu-mobile: $screen-md-max;
+$screen-menu-desktop: $screen-lg-min;

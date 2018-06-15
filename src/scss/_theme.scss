@@ -1,0 +1,27 @@
+$color-1: #fd2236;
+$color-2: #da2838;
+
+$colors: ($color-1, $color-2);
+
+// background-colors e text-colors
+@for $i from 1 through length($colors) {
+  .bg-color-#{$i} {
+    background-color: nth($colors, $i);
+  }
+
+  .text-color-#{$i} {
+    color: nth($colors, $i);
+  }
+}
+
+// text-align
+@each $direction in ('center', 'left', 'right') {
+  .text-#{$direction} {
+    text-align: #{$direction};
+  }
+}
+
+table {
+  width: 600px;
+  border: 0;
+}
