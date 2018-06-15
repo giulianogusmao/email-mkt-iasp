@@ -2,29 +2,42 @@
   Utilidades
 */
 
-/*
-  Cores VIVO
-*/
-@for $i from 1 through length($colors-vivo) {
-  .pti-color-vivo-#{$i} {
-    color: nth($colors-vivo, $i);
-  }
+.w-50 {
+  width: 50px;
+}
 
-  .pti-bg-vivo-#{$i} {
-    background-color: nth($colors-vivo, $i);
-  }
+.text-upper {
+  text-transform: uppercase;
+}
+
+.bg-white {
+  background-color: #fff;
+}
+
+.p-2 {
+  padding: 10px;
+}
+
+.fs-16 {
+  font-size: 14px;
+}
+
+.fs-14 {
+  font-size: 12px;
+}
+
+.fs-18 {
+  font-size: 16px;
+}
+
+.fs-22 {
+  font-size: 20px;
 }
 
 
-// /*
-//   Cores black
-// */
-// @for $i from 1 through length($colors-black) {
-//   .pti-color-black-#{$i}0 {
-//     color: nth($colors-black, $i);
-//   }
-
-//   .pti-bg-black-#{$i}0 {
-//     background-color: nth($colors-black, $i);
-//   }
-// }
+// text-align
+@each $direction in ('center', 'left', 'right') {
+  .text-#{$direction} {
+    text-align: #{$direction} !important;
+  }
+}

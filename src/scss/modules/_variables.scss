@@ -19,11 +19,6 @@ $font-italic: '#{$family}-RegularItalic';
 $font-bold: '#{$family}-Bold';
 $font-outras: 'Helvetica Neue, Helvetica, Arial, sans-serif';
 
-%font-light { font-family: '#{$font-light}', #{$font-outras}; }
-%font-regular { font-family: '#{$font-regular}', #{$font-outras}; }
-%font-italic { font-family: '#{$font-italic}', #{$font-outras}; }
-%font-bold { font-family: '#{$font-bold}', #{$font-outras}; }
-
 // fonts size
 $font-size-reset: 62.5% !default;
 $font-size: 1.5rem !default;

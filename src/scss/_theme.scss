@@ -1,5 +1,6 @@
 $color-1: #fd2236;
 $color-2: #da2838;
+$color-3: #b2b2b2;
 
 $colors: ($color-1, $color-2);
 
@@ -14,14 +15,105 @@ $colors: ($color-1, $color-2);
   }
 }
 
-// text-align
-@each $direction in ('center', 'left', 'right') {
-  .text-#{$direction} {
-    text-align: #{$direction};
-  }
+.btn {
+    padding: 10px 14px;
+    font-size: 14px;
+    letter-spacing: 1px;
+    font-weight: bold;
+    font-style: normal;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    text-decoration: none;
+    background-color: $color-1;
+    color: #FFF;
 }
+
 
 table {
   width: 600px;
   border: 0;
+}
+
+.header-logotipo {
+  padding: 10px;
+}
+
+.text-destaque {
+  font-size: 20px;
+  vertical-align: bottom;
+  text-align: center;
+  @extend .text-upper;
+  @extend .font-bold-italic;
+}
+
+.font-destaque-1 {
+  @extend .text-destaque;
+  font-size: 30px;
+  margin: 5px 0;
+}
+
+.foto {
+  margin: 10px 0;
+}
+
+.box {
+  $border-width: 8px;
+  $border-color: $color-3;
+  $border-space: 10px;
+  $border-style: solid;
+
+  // table {
+  //   border-collapse: collapse;
+  // }
+
+  .box-destaque {
+    @extend .text-destaque;
+  }
+  
+  .box-destaque-2 {
+    @extend .text-destaque;
+    font-size: 14px;
+  }
+  
+  .bg-foto-principal {
+    background: url('../images/foto-principal.jpg');
+    background-repeat: no-repeat;
+    background-position: center top;
+    height: 174px;
+    vertical-align: bottom;
+  }
+
+  .box-texto {
+    padding: 10px;
+  }
+
+  .box-space {
+    width: $border-space;
+  }
+
+  .box-space-border {
+    width: ($border-space + $border-width);
+  }
+
+  .width-border {
+    width: $border-width;
+  }
+
+  .box-border {
+    &.border-bottom {
+      @include border('bottom', $border-width, $border-style, $border-color);
+    }
+
+    &.border-top {
+      @include border('top', $border-width, $border-style, $border-color);
+    }
+
+    &.border-right {
+      @include border('right', $border-width, $border-style, $border-color);
+    }
+
+    &.border-left {
+      @include border('left', $border-width, $border-style, $border-color);
+    }
+  }
 }

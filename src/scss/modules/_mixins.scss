@@ -47,6 +47,13 @@
 }
 
 // =============================================================================================
+@mixin border($direction, $border-width, $border-style, $border-color) {
+  border-#{$direction}-width: $border-width;
+  border-#{$direction}-style: $border-style;
+  border-#{$direction}-color: $border-color;
+}
+
+// =============================================================================================
 @mixin setImageHeight($image, $width, $height, $proporcao: 1) {
     width: $width * $proporcao;
     height: $height * $proporcao;

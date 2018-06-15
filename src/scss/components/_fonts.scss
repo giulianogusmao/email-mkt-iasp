@@ -13,8 +13,28 @@
     }
 }
 
+.font-regular {
+  font-family: '#{$font-regular}', #{$font-outras}; 
+}
+
+.font-bold {
+  font-family: '#{$font-bold}', #{$font-outras}; 
+}
+
+.font-italic {
+  font-family: '#{$font-italic}', #{$font-outras}; 
+}
+
+.font-light {
+  font-family: '#{$font-light}', #{$font-outras}; 
+}
+
+.font-bold-italic {
+  font-family: '#{$font-bold}', #{$font-outras}; 
+}
+
 .#{$project-name} {
-  @extend %font-regular;
+  @extend .font-regular;
   color: $cor-text;
   font-size: cRem($font-size);
 
@@ -28,12 +48,12 @@
   }
 
   em, i:not(.fa) {
-    @extend %font-italic; // fonte-italic
+    @extend .font-italic; // fonte-italic
     font-style: normal;
     font-weight: normal;
 
     & b, & strong, b &, strong & {
-      @extend %font-italic; // fonte-bold-italic
+      @extend .font-italic; // fonte-bold-italic
       font-style: normal;
       font-weight: bold;
     }
@@ -48,6 +68,6 @@
 
 @each $name in ('light', 'regular') {
   .#{$project-name} .font-#{$name} {
-    @extend %font-#{$name};
+    @extend .font-#{$name};
   }
 }
