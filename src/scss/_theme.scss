@@ -1,8 +1,10 @@
 $color-1: #fd2236;
 $color-2: #da2838;
 $color-3: #b2b2b2;
+$color-4: #dfdfdf;
+$color-5: #fff;
 
-$colors: ($color-1, $color-2);
+$colors: ($color-1, $color-2, $color-3, $color-4, $color-5);
 
 // background-colors e text-colors
 @for $i from 1 through length($colors) {
@@ -15,6 +17,12 @@ $colors: ($color-1, $color-2);
   }
 }
 
+.link-padrao {
+  color: #000;
+  text-decoration: none;
+}
+
+
 .btn {
     padding: 10px 14px;
     font-size: 14px;
@@ -26,12 +34,34 @@ $colors: ($color-1, $color-2);
     text-decoration: none;
     background-color: $color-1;
     color: #FFF;
+    white-space: nowrap;
+    @extend .font-regular;
 }
 
+.line-footer {
+  display: block;
+  height: 5px;
+  width: 100%;
+  background-color: $color-1;
+  margin-top: 8px;
+}
+
+.hidden-max {
+  overflow: hidden;
+  max-height: 293px;
+}
+
+.divider {
+  height: 25px;
+}
 
 table {
-  width: 600px;
+  width: 100%;
   border: 0;
+}
+
+.table-main {
+  width: 600px;
 }
 
 .header-logotipo {
@@ -43,7 +73,7 @@ table {
   vertical-align: bottom;
   text-align: center;
   @extend .text-upper;
-  @extend .font-bold-italic;
+  @extend .font-black-italic;
 }
 
 .font-destaque-1 {
@@ -59,7 +89,7 @@ table {
 .box {
   $border-width: 8px;
   $border-color: $color-3;
-  $border-space: 10px;
+  $border-space: 8px;
   $border-style: solid;
 
   // table {
@@ -72,19 +102,21 @@ table {
   
   .box-destaque-2 {
     @extend .text-destaque;
-    font-size: 14px;
+    font-size: 16px;
   }
   
   .bg-foto-principal {
     background: url('../images/foto-principal.jpg');
     background-repeat: no-repeat;
     background-position: center top;
-    height: 174px;
+    height: 220px;
     vertical-align: bottom;
   }
 
   .box-texto {
     padding: 10px;
+    font-size: 14px;
+    @extend .font-regular;
   }
 
   .box-space {
@@ -115,5 +147,91 @@ table {
     &.border-left {
       @include border('left', $border-width, $border-style, $border-color);
     }
+  }
+
+  .box-border-all {
+    border-width: $border-width;
+    border-style: $border-style;
+    border-color: $border-color;
+  }
+
+  &.box-50-50 {
+    .box-container {
+      width: 285px;
+    }
+  }
+}
+
+.box.box-presidente {
+  .box-destaque {
+    font-size: 12px;
+    font-weight: normal;
+    @extend .font-extra-light;
+  }
+
+  .box-texto {
+    font-size: 15px;
+  }
+}
+
+.box-editora {
+  .box-border-all {
+    border-color: black;
+  }
+
+  .logo-editora {
+    width: 150px;
+    text-align: center;
+
+    img {
+      width: 70px;
+      height: 114px;
+    }
+  }
+
+  .text-editora {
+    .txt-1 {
+      font-size: 40px;
+      font-weight: bold;
+      margin: 0;
+      @extend .font-black-italic;
+    }
+    
+    .txt-2 {
+      font-size: 25px;
+      font-weight: normal;
+      margin: 0;
+      @extend .font-italic;
+    }
+  }
+  
+  a {
+    @extend .link-padrao;
+  }
+}
+
+.box-proximos-eventos {
+  td {
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
+
+  .txt {
+    text-align: right;
+    text-transform: uppercase;
+    font-size: 16px;
+    @extend .font-black-italic;
+  }
+
+  a {
+    @extend .link-padrao;
+  }
+}
+
+.social-medias {
+  width: auto;
+
+  td {
+    padding: 20px 5px;
   }
 }

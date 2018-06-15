@@ -9,14 +9,17 @@ $url-path-image: "img/";
 // =============================================================================================
 // FONTE
 
-$url-path-fontes: "../fonts/Telefonica"; // desenvolvimento
-$family: "TelefonicaWeb";
-$fontes: "Light", "Regular", "RegularItalic", "Bold";
+$url-path-fontes: "../fonts"; // desenvolvimento
+$family: "Panton";
+$fontes: "ExtraLightItalic", "LightitalicCaps", "SemiBold", "SemiBoldItalic", "BlackCaps", "BlackitalicCaps", "ExtraBold";
 
-$font-light: '#{$family}-Light';
-$font-regular: '#{$family}-Regular';
-$font-italic: '#{$family}-RegularItalic';
-$font-bold: '#{$family}-Bold';
+$font-extra-light: '#{$family}-ExtraLightItalic';
+$font-light: '#{$family}-LightitalicCaps';
+$font-regular: '#{$family}-SemiBold';
+$font-italic: '#{$family}-SemiBoldItalic';
+$font-black: '#{$family}-BlackCaps';
+$font-black-italic: '#{$family}-BlackitalicCaps';
+$font-bold: '#{$family}-ExtraBold';
 $font-outras: 'Helvetica Neue, Helvetica, Arial, sans-serif';
 
 // fonts size

@@ -1,5 +1,5 @@
 @each $_fonte in $fontes {
-    $diretorio: '#{$url-path-fontes}/#{$_fonte}/';
+    $diretorio: '#{$url-path-fontes}/';
     $nome: '#{$family}-#{$_fonte}';
 
     @font-face {
@@ -10,6 +10,7 @@
              url('#{$diretorio}#{$nome}.woff') format('woff'),
              url('#{$diretorio}#{$nome}.otf') format('truetype'),
              url('#{$diretorio}#{$nome}.svg') format('svg');
+        // src: url('#{$diretorio}#{$nome}.otf') format('truetype');
     }
 }
 
@@ -25,12 +26,24 @@
   font-family: '#{$font-italic}', #{$font-outras}; 
 }
 
+.font-extra-light {
+  font-family: '#{font-extra-light}', #{$font-outras}; 
+}
+
 .font-light {
   font-family: '#{$font-light}', #{$font-outras}; 
 }
 
 .font-bold-italic {
   font-family: '#{$font-bold}', #{$font-outras}; 
+}
+
+.font-black {
+  font-family: '#{$font-black}', #{$font-outras}; 
+}
+
+.font-black-italic {
+  font-family: '#{$font-black-italic}', #{$font-outras}; 
 }
 
 .#{$project-name} {
@@ -48,12 +61,12 @@
   }
 
   em, i:not(.fa) {
-    @extend .font-italic; // fonte-italic
+    // @extend .font-italic; // fonte-italic
     font-style: normal;
     font-weight: normal;
 
     & b, & strong, b &, strong & {
-      @extend .font-italic; // fonte-bold-italic
+      // @extend .font-italic; // fonte-bold-italic
       font-style: normal;
       font-weight: bold;
     }
