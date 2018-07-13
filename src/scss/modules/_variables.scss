@@ -9,24 +9,32 @@ $url-path-image: "img/";
 // =============================================================================================
 // FONTE
 
-$url-path-fontes: "../fonts"; // desenvolvimento
+$url-path-fontes: "http://www.acord.com.br/zoegas/iasp/avocar/fonts"; // desenvolvimento
 $family: "Panton";
-$fontes: "ExtraLightItalic", "LightitalicCaps", "SemiBold", "SemiBoldItalic", "BlackCaps", "BlackitalicCaps", "ExtraBold";
+$fontes: (
+  // "ExtraLightItalic",
+  // "LightitalicCaps",
+  "SemiBold",
+  "SemiBoldItalic",
+  // "BlackCaps",
+  "BlackitalicCaps"
+  // "ExtraBold"
+);
 
 $font-extra-light: '#{$family}-ExtraLightItalic';
-$font-light: '#{$family}-LightitalicCaps';
+// $font-light: '#{$family}-LightitalicCaps';
 $font-regular: '#{$family}-SemiBold';
 $font-italic: '#{$family}-SemiBoldItalic';
-$font-black: '#{$family}-BlackCaps';
+// $font-black: '#{$family}-BlackCaps';
 $font-black-italic: '#{$family}-BlackitalicCaps';
-$font-bold: '#{$family}-ExtraBold';
+// $font-bold: '#{$family}-ExtraBold';
 $font-outras: 'Helvetica Neue, Helvetica, Arial, sans-serif';
 
 // fonts size
 $font-size-reset: 62.5% !default;
 $font-size: 1.5rem !default;
 
-$project-name: 'pti-main';
+$project-name: 'table-main';
 
 
 // =============================================================================================
@@ -107,7 +115,7 @@ $cor-info-dark: darken($cor-info, 10);
 $cor-success-dark: darken($cor-success, 10);
 
 // cores fontes
-$cor-text: $cor-black-800 !default;
+$cor-text: $cor-black-1 !default;
 
 $border-color: rgba(0,0,0,.125);
 $border-style: 'solid';

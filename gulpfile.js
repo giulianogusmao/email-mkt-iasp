@@ -1,18 +1,16 @@
 var gulp = require('gulp'),
     browserSync = require('browser-sync'),
     sass = require('gulp-sass'),
-    sourcemaps = require('gulp-sourcemaps'),
     autoprefixer = require('gulp-autoprefixer'),
     cleanCSS = require('gulp-clean-css'),
     uglify = require('gulp-uglify'),
     concat = require('gulp-concat'),
     imagemin = require('gulp-imagemin'),
     changed = require('gulp-changed'),
-    htmlReaplce = require('gulp-html-replace'),
+    inlinesource = require('gulp-inline-source'),
     htmlMin = require('gulp-htmlmin'),
     inlineCss = require('gulp-inline-css'),
     del = require('del'),
-    // gulpCopy = require('gulp-copy'),
     sequence = require('run-sequence');
 
 var config = {
@@ -53,12 +51,12 @@ gulp.task('serve', ['sass'], function () {
 
 gulp.task('sass', function () {
     return gulp.src(config.scssin)
-        .pipe(sourcemaps.init())
+        // .pipe(sourcemaps.init())
         .pipe(sass({ outputStyle: 'expanded' }).on('error', sass.logError))
         .pipe(autoprefixer({
             browsers: ['last 3 versions']
         }))
-        .pipe(sourcemaps.write())
+        // .pipe(sourcemaps.write())
         .pipe(gulp.dest(config.scssout))
         .pipe(browserSync.stream());
 });
@@ -96,9 +94,12 @@ gulp.task('img', function () {
 
 gulp.task('html', function () {
     return gulp.src(config.htmlin)
-        .pipe(htmlReaplce({
-            'css': config.cssreplaceout,
-            'js': config.jsreplaceout,
+        // .pipe(htmlReaplce({
+        //     'css': config.cssreplaceout,
+        //     'js': config.jsreplaceout,
+        // }))
+        .pipe(inlinesource({
+            compress: true
         }))
         .pipe(inlineCss({
             applyLinkTags: true,
@@ -112,7 +113,8 @@ gulp.task('html', function () {
             sortAttributes: true,
             sortClassName: true,
             collapseWhitespace: true,
-            minifyCSS: true
+            removeComments: true,
+            // minifyCSS: true
         }))
         .pipe(gulp.dest(config.dist))
 });

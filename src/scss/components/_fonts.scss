@@ -4,12 +4,13 @@
 
     @font-face {
         font-family: '#{$nome}';
-        src: url('#{$diretorio}#{$nome}.eot');
-        src: url('#{$diretorio}#{$nome}.eot?#iefix') format('embedded-opentype'),
-             url('#{$diretorio}#{$nome}.woff2') format('woff2'),
-             url('#{$diretorio}#{$nome}.woff') format('woff'),
-             url('#{$diretorio}#{$nome}.otf') format('truetype'),
-             url('#{$diretorio}#{$nome}.svg') format('svg');
+        // src: url('#{$diretorio}#{$nome}.otf');
+        src: url('#{$diretorio}#{$nome}.otf') format("opentype");
+        // src: url('#{$diretorio}#{$nome}.eot?#iefix') format('embedded-opentype'),
+        //      url('#{$diretorio}#{$nome}.woff2') format('woff2'),
+        //      url('#{$diretorio}#{$nome}.woff') format('woff'),
+        //      url('#{$diretorio}#{$nome}.otf') format('truetype'),
+        //      url('#{$diretorio}#{$nome}.svg') format('svg');
         // src: url('#{$diretorio}#{$nome}.otf') format('truetype');
     }
 }
@@ -18,9 +19,9 @@
   font-family: '#{$font-regular}', #{$font-outras}; 
 }
 
-.font-bold {
-  font-family: '#{$font-bold}', #{$font-outras}; 
-}
+// .font-bold {
+//   font-family: '#{$font-bold}', #{$font-outras}; 
+// }
 
 .font-italic {
   font-family: '#{$font-italic}', #{$font-outras}; 
@@ -30,46 +31,45 @@
   font-family: '#{font-extra-light}', #{$font-outras}; 
 }
 
-.font-light {
-  font-family: '#{$font-light}', #{$font-outras}; 
-}
+// .font-light {
+//   font-family: '#{$font-light}', #{$font-outras}; 
+// }
 
-.font-bold-italic {
-  font-family: '#{$font-bold}', #{$font-outras}; 
-}
+// .font-bold-italic {
+//   font-family: '#{$font-bold}', #{$font-outras}; 
+// }
 
-.font-black {
-  font-family: '#{$font-black}', #{$font-outras}; 
-}
+// .font-black {
+//   font-family: '#{$font-black}', #{$font-outras}; 
+// }
 
 .font-black-italic {
   font-family: '#{$font-black-italic}', #{$font-outras}; 
 }
 
-.#{$project-name} {
-  @extend .font-regular;
-  color: $cor-text;
-  font-size: cRem($font-size);
+strong, b {
+  font-style: normal;
+  font-weight: bold;
+}
 
-  @media screen and (max-width: $screen-md-max) {
-    font-size: 80%;
-  }
+em, i:not(.fa) {
+  // @extend .font-italic; // fonte-italic
+  font-style: normal;
+  font-weight: normal;
 
-  strong, b {
+  & b, & strong, b &, strong & {
+    // @extend .font-italic; // fonte-bold-italic
     font-style: normal;
     font-weight: bold;
   }
+}
 
-  em, i:not(.fa) {
-    // @extend .font-italic; // fonte-italic
-    font-style: normal;
-    font-weight: normal;
+.#{$project-name} {
+  @extend .font-regular;
+  color: $cor-text;
 
-    & b, & strong, b &, strong & {
-      // @extend .font-italic; // fonte-bold-italic
-      font-style: normal;
-      font-weight: bold;
-    }
+  @media screen and (max-width: $screen-md-max) {
+    font-size: 80%;
   }
 
   @for $i from 0 through 5 {
@@ -79,7 +79,7 @@
   }
 }
 
-@each $name in ('light', 'regular') {
+@each $name in ('regular') {
   .#{$project-name} .font-#{$name} {
     @extend .font-#{$name};
   }
