@@ -1,18 +1,19 @@
-var gulp = require('gulp');
-var browserSync = require('browser-sync');
-var sass = require('gulp-sass');
-var sourcemaps = require('gulp-sourcemaps');
-var autoprefixer = require('gulp-autoprefixer');
-var cleanCSS = require('gulp-clean-css');
-var uglify = require('gulp-uglify');
-var concat = require('gulp-concat');
-var imagemin = require('gulp-imagemin');
-var changed = require('gulp-changed');
-var htmlReaplce = require('gulp-html-replace');
-var htmlMin = require('gulp-htmlmin');
-var del = require('del');
-// var gulpCopy = require('gulp-copy');
-var sequence = require('run-sequence');
+var gulp = require('gulp'),
+    browserSync = require('browser-sync'),
+    sass = require('gulp-sass'),
+    sourcemaps = require('gulp-sourcemaps'),
+    autoprefixer = require('gulp-autoprefixer'),
+    cleanCSS = require('gulp-clean-css'),
+    uglify = require('gulp-uglify'),
+    concat = require('gulp-concat'),
+    imagemin = require('gulp-imagemin'),
+    changed = require('gulp-changed'),
+    htmlReaplce = require('gulp-html-replace'),
+    htmlMin = require('gulp-htmlmin'),
+    inlineCss = require('gulp-inline-css'),
+    del = require('del'),
+    // gulpCopy = require('gulp-copy'),
+    sequence = require('run-sequence');
 
 var config = {
     dist: 'dist/',
@@ -99,11 +100,23 @@ gulp.task('html', function () {
             'css': config.cssreplaceout,
             'js': config.jsreplaceout
         }))
-        .pipe(htmlMin({
-            sortAttributes: true,
-            sortClassName: true,
-            collapseWhitespace: true
-        }))
+        // .pipe(htmlMin({
+        //     sortAttributes: true,
+        //     sortClassName: true,
+        //     collapseWhitespace: true
+        // }))
+        .pipe(inlineCss({
+            applyLinkTags: true,
+            removeLinkTags: true,
+            applyStyleTags: false,
+            removeStyleTags: false,
+            applyWidthAttributes: true,
+            applyTableAttributes: true,
+        })
+        // .then(function(html) {
+        //     console.log(html);
+        // })
+        )
         .pipe(gulp.dest(config.dist))
 });
 
