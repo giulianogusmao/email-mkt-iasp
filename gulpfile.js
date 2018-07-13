@@ -98,25 +98,21 @@ gulp.task('html', function () {
     return gulp.src(config.htmlin)
         .pipe(htmlReaplce({
             'css': config.cssreplaceout,
-            'js': config.jsreplaceout
+            'js': config.jsreplaceout,
         }))
-        // .pipe(htmlMin({
-        //     sortAttributes: true,
-        //     sortClassName: true,
-        //     collapseWhitespace: true
-        // }))
         .pipe(inlineCss({
             applyLinkTags: true,
             removeLinkTags: true,
             applyStyleTags: false,
             removeStyleTags: false,
-            applyWidthAttributes: true,
-            applyTableAttributes: true,
-        })
-        // .then(function(html) {
-        //     console.log(html);
-        // })
-        )
+            applyWidthAttributes: false,
+            applyTableAttributes: false,
+        }))
+        .pipe(htmlMin({
+            sortAttributes: true,
+            sortClassName: true,
+            collapseWhitespace: true
+        }))
         .pipe(gulp.dest(config.dist))
 });
 

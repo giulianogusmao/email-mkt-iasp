@@ -1,8 +1,156 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional //EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
 
 <head>
-    <meta charset="UTF-8">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IASP JULHO/2018</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <style type="text/css">
+        @font-face {
+            font-family: "Panton-ExtraLightItalic";
+            src: url("http://www.acord.com.br/zoegas/iasp/avocar/fonts/Panton-ExtraLightItalic.otf");
+        }
+
+        @font-face {
+            font-family: "Panton-LightitalicCaps";
+            src: url("http://www.acord.com.br/zoegas/iasp/avocar/fonts/Panton-LightitalicCaps.otf");
+        }
+
+        @font-face {
+            font-family: "Panton-SemiBold";
+            src: url("http://www.acord.com.br/zoegas/iasp/avocar/fonts/Panton-SemiBold.otf");
+        }
+
+        @font-face {
+            font-family: "Panton-SemiBoldItalic";
+            src: url("http://www.acord.com.br/zoegas/iasp/avocar/fonts/Panton-SemiBoldItalic.otf");
+        }
+
+        @font-face {
+            font-family: "Panton-BlackCaps";
+            src: url("http://www.acord.com.br/zoegas/iasp/avocar/fonts/Panton-BlackCaps.otf");
+        }
+
+        @font-face {
+            font-family: "Panton-BlackitalicCaps";
+            src: url("http://www.acord.com.br/zoegas/iasp/avocar/fonts/Panton-BlackitalicCaps.otf");
+        }
+
+        @font-face {
+            font-family: "Panton-ExtraBold";
+            src: url("http://www.acord.com.br/zoegas/iasp/avocar/fonts/Panton-ExtraBold.otf");
+        }
+
+        .font-regular,
+        .pti-main,
+        .pti-main .font-regular,
+        .btn,
+        .box .box-texto {
+            font-family: "Panton-SemiBold", Helvetica Neue, Helvetica, Arial, sans-serif;
+        }
+
+        .font-bold {
+            font-family: "Panton-ExtraBold", Helvetica Neue, Helvetica, Arial, sans-serif;
+        }
+
+        .font-italic,
+        .box-editora .text-editora .txt-2 {
+            font-family: "Panton-SemiBoldItalic", Helvetica Neue, Helvetica, Arial, sans-serif;
+        }
+
+        .font-extra-light,
+        .box.box-presidente .box-destaque {
+            font-family: "font-extra-light", Helvetica Neue, Helvetica, Arial, sans-serif;
+        }
+
+        .font-light,
+        .pti-main .font-light {
+            font-family: "Panton-LightitalicCaps", Helvetica Neue, Helvetica, Arial, sans-serif;
+        }
+
+        .font-bold-italic {
+            font-family: "Panton-ExtraBold", Helvetica Neue, Helvetica, Arial, sans-serif;
+        }
+
+        .font-black {
+            font-family: "Panton-BlackCaps", Helvetica Neue, Helvetica, Arial, sans-serif;
+        }
+
+        .font-black-italic,
+        .text-destaque,
+        .font-destaque-1,
+        .box .box-destaque,
+        .box .box-destaque-2,
+        .box-editora .text-editora .txt-1,
+        .box-proximos-eventos .txt {
+            font-family: "Panton-BlackitalicCaps", Helvetica Neue, Helvetica, Arial, sans-serif;
+        }
+
+        @media screen and (max-width: 650px) {
+            .table-main {
+                width: 100% !important;
+            }
+            .box.box-presidente .foto {
+                width: 50% !important;
+                max-width: 266px !important;
+                text-align: left !important;
+            }
+            .box.box-presidente .foto img {
+                margin: 0 !important;
+                width: 100% !important;
+            }
+            .box .bg-foto-principal {
+                height: 180px !important;
+            }
+            .hidden-max {
+                overflow: visible !important;
+                max-height: none !important;
+            }
+            .group-box-50-50 {
+                display: none !important;
+            }
+            .box-50-50-responsive {
+                display: table !important;
+            }
+        }
+
+        @media screen and (max-width: 550px) {
+            .box.box-2 .box-foto-destaque,
+            .box.box-3 .box-foto-destaque {
+                background: #b2b2b2 !important;
+                width: 8px !important;
+            }
+            .box.box-2 .box-foto-destaque img,
+            .box.box-3 .box-foto-destaque img {
+                display: none !important;
+            }
+        }
+
+        @media screen and (max-width: 450px) {
+            .box.box-presidente .foto,
+            .box.box-presidente .box-texto {
+                display: block !important;
+                margin: 0 !important;
+            }
+            .box.box-presidente .foto {
+                width: 100% !important;
+                max-width: none !important;
+                text-align: center !important;
+            }
+            .box.box-presidente .foto img {
+                margin: 0 auto !important;
+            }
+            .border-right~.border-right {
+                padding: 0 !important;
+                width: 0 !important;
+            }
+            .box .bg-foto-principal {
+                height: 150px !important;
+            }
+        }
+    </style>
 
     <!-- build:css -->
     <link rel="stylesheet" href="./css/style.css">
@@ -10,459 +158,675 @@
 </head>
 
 <body>
-    <table align="center" border="0" cellpadding="0" cellspacing="0" class="table-main">
-        <tbody>
-            <!-- topo lototipo -->
-            <tr>
-                <td class="bg-color-1 text-center header-logotipo">
-                    <img src="./images/logo.jpg" width="200px" height="62px" alt="IASP - Instituto dos advogados de São Paulo">
-                </td>
-            </tr>
-            <!-- end .header-logotipo -->
+    <table align="center" border="0" cellpadding="0" cellspacing="0" class="table-main news-2018-julho">
 
-            <!-- .header -->
-            <tr>
-                <td>
-                    <table align="center" border="0" cellpadding="0" cellspacing="0" class="header">
-                        <td width="50"></td>
-                        <td class="text-center">
-                            <p style="text-transform: uppercase;font-family: 'Panton-SemiBoldItalic', Helvetica Neue, Helvetica, Arial, sans-serif;font-size: 40px;vertical-align: bottom;text-align: center;margin: 5px 0">
-                                <em>I@SP</em>
-                            </p>
-                            <div class="font-regular fs-16 text-upper">
-                                Junho/2018
-                            </div>
-                            <br/>
+        <!-- topo lototipo -->
+        <tr>
+            <td class="bg-color-1 text-center header-logotipo">
+                <img src="https://esquadriasinova.com.br/teste-iasp/logo.jpg" width="200px" height="62px" alt="IASP - Instituto dos advogados de São Paulo">
+            </td>
+        </tr>
+        <!-- end .header-logotipo -->
+
+        <!-- .header -->
+        <tr>
+            <td align="center">
+                <p style="text-transform: uppercase;font-family: 'Panton-BlackitalicCaps', Helvetica Neue, Helvetica, Arial, sans-serif;font-size: 40px;vertical-align: bottom;text-align: center;margin: 5px 0">
+                    <strong>
+                        <em>I@SP</em>
+                    </strong>
+                </p>
+
+                <span class="font-regular fs-16 text-upper">
+                    Julho/2018
+                </span>
+
+                <br/>
+                <br/>
+            </td>
+        </tr>
+        <!-- end .header -->
+
+        <!-- box-presidente -->
+        <tr>
+            <td>
+                <table align="center" border="0" cellpadding="0" cellspacing="0" class="box box-presidente">
+                    <tr>
+                        <td>
+                            <table align="center" border="0" cellpadding="0" cellspacing="0">
+                                <tr>
+                                    <td class="box-space"></td>
+                                    <td class="box-border border-bottom"></td>
+                                    <td class="box-destaque w-50 text-upper bg-color-1 text-color-5 font-light p-1">
+                                        <!-- <a href="http://www.iasp.org.br/notcias-iasp/novo-canal-de-comunicacao-com-a-sociedade-e-o-publico-juridico" target="_blank"
+                                                class="text-white">Editorial</a> -->
+                                        <div>
+                                            <!--[if mso]>
+                                                <v:rect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="http://testetestetesteteste" style="height:40px;v-text-anchor:middle;width:120px;" stroke="f" fillcolor="#fd2236">
+                                                <w:anchorlock/>
+                                                <center>
+                                                <![endif]-->
+                                            <a href="http://testetestetesteteste" style="background-color:#fd2236;color:#ffffff;display:inline-block;font-family:'Panton-SemiBold', Helvetica Neue, Helvetica, Arial, sans-serif;font-size:14px;font-weight:bold;line-height:25px;text-align:center;text-decoration:none;width:90px;-webkit-text-size-adjust:none;">EDITORIAL</a>
+                                            <!--[if mso]>
+                                                </center>
+                                                </v:rect>
+                                            <![endif]-->
+                                        </div>
+                                    </td>
+                                    <td class="box-border border-bottom"></td>
+                                    <td class="box-space"></td>
+                                </tr>
+                            </table>
                         </td>
-                        <td width="50"></td>
-                    </table>
-                </td>
-            </tr>
-            <!-- end .header -->
+                    </tr>
 
-            <!-- box-presidente -->
-            <tr>
-                <td>
-                    <table align="center" border="0" cellpadding="0" cellspacing="0" class="box box-presidente">
-                        <tr>
-                            <td>
-                                <table align="center" border="0" cellpadding="0" cellspacing="0">
-                                    <tr>
-                                        <td class="box-space"></td>
-                                        <td class="box-border border-bottom"></td>
-                                        <td class="box-destaque w-50 text-upper bg-color-1 text-color-5 font-light p-1">
-                                            <a href="http://www.iasp.org.br/notcias-iasp/novo-canal-de-comunicacao-com-a-sociedade-e-o-publico-juridico" target="_blank"
-                                                class="text-white">Editorial</a>
-                                        </td>
-                                        <td class="box-border border-bottom"></td>
-                                        <td class="box-space"></td>
-                                    </tr>
-                                </table>
-                            </td>
-                        </tr>
+                    <tr>
+                        <td>
+                            <table align="center" border="0" cellpadding="0" cellspacing="0">
+                                <tr>
+                                    <td class="box-border border-right width-border"></td>
+                                    <td>
+                                        <table align="center" border="0" cellpadding="0" cellspacing="0">
+                                            <tr>
+                                                <td class="foto" width="266">
+                                                    <img src="https://esquadriasinova.com.br/teste-iasp/foto-presidente.jpg" alt="José Horácio Ribeiro">
+                                                </td>
+                                                <td class="box-texto text-center">
+                                                    <span class="text-center">
+                                                        <strong class="font-black-italic">
+                                                            <em>
+                                                                TRANSPARÊNCIA E EFICIÊNCIA
+                                                            </em>
+                                                        </strong>
+                                                    </span>
+                                                    <br>
+                                                    <span class="fs-14 font-regular">
+                                                        José Horácio Ribeiro,
+                                                        <em class="font-italic">Presidente do Iasp</em>
+                                                    </span>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td class="box-border border-right width-border"></td>
+                                    <td class="box-space"></td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
 
-                        <tr>
-                            <td>
-                                <table align="center" border="0" cellpadding="0" cellspacing="0">
-                                    <tr>
-                                        <td class="box-border border-right width-border"></td>
-                                        <td>
-                                            <table align="center" border="0" cellpadding="0" cellspacing="0">
-                                                <tr>
-                                                    <td class="foto">
-                                                        <img src="./images/foto-presidente.jpg" alt="José Horácio Ribeiro">
-                                                    </td>
-                                                    <td class="box-texto text-center">
+                    <tr>
+                        <td>
+                            <table align="center" border="0" cellpadding="0" cellspacing="0">
+                                <tr>
+                                    <td class="box-space"></td>
+                                    <td class="box-border border-top"></td>
+                                    <td class="box-space"></td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <!-- end .box-presidente -->
+
+        <tr>
+            <td class="divider">
+                &nbsp;
+            </td>
+        </tr>
+
+        <!-- box-principal box-1 -->
+        <tr>
+            <td>
+                <table align="center" border="0" cellpadding="0" cellspacing="0" class="box box-principal box-1">
+                    <tr>
+                        <td>
+                            <table align="center" border="0" cellpadding="0" cellspacing="0">
+                                <tr>
+                                    <td class="box-space"></td>
+                                    <td class="box-border border-bottom"></td>
+                                    <td class="box-space"></td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="bg-foto-principal">
+                            <table align="center" border="0" cellpadding="0" cellspacing="0">
+                                <tr>
+                                    <td class="box-space-border"></td>
+                                    <td class="box-destaque-2 bg-white p-2">
+                                        <strong>TJSP atende propostas e agiliza pagamentos de precatórios</strong>
+                                    </td>
+                                    <td class="box-space-border"></td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <table align="center" border="0" cellpadding="0" cellspacing="0">
+                                <tr>
+                                    <td class="box-space"></td>
+                                    <td class="box-border border-left width-border"></td>
+                                    <td class="box-texto text-center">
+                                        <p class="text-center">
+                                            O Tribunal de Justiça de São Paulo anunciou medidas sugeridas pelo Iasp de modernização do sistema, que irão facilitar o
+                                            atendimento à antiga demanda da Advocacia paulista.
+                                        </p>
+
+                                        <div>
+                                            <!--[if mso]>
+                                                <v:rect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="http://testetestetesteteste" style="height:40px;v-text-anchor:middle;width:120px;" stroke="f" fillcolor="#fd2236">
+                                                <w:anchorlock/>
+                                                <center>
+                                                <![endif]-->
+                                            <a href="http://testetestetesteteste" style="background-color:#fd2236;color:#ffffff;display:inline-block;font-family:'Panton-SemiBold', Helvetica Neue, Helvetica, Arial, sans-serif;font-size:14px;font-weight:bold;line-height:40px;text-align:center;text-decoration:none;width:120px;-webkit-text-size-adjust:none;">SAIBA MAIS</a>
+                                            <!--[if mso]>
+                                                </center>
+                                                </v:rect>
+                                            <![endif]-->
+                                        </div>
+                                        <br/>
+                                    </td>
+                                    <td class="box-border border-right width-border"></td>
+                                    <td class="box-space"></td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <table align="center" border="0" cellpadding="0" cellspacing="0">
+                                <tr>
+                                    <td class="box-space"></td>
+                                    <td class="box-border border-top"></td>
+                                    <td class="box-space"></td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <!-- end .box-principal -->
+
+        <tr>
+            <td class="divider">
+                &nbsp;
+            </td>
+        </tr>
+
+        <!-- box chamada 1 -->
+        <tr>
+            <td>
+                <table align="center" border="0" cellpadding="0" cellspacing="0" class="box box-chamada">
+                    <tr>
+                        <td>
+                            <table align="center" border="0" cellpadding="0" cellspacing="0">
+                                <tr>
+                                    <td class="box-space"></td>
+                                    <td class="box-border border-top"></td>
+                                    <td class="box-space"></td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <table align="center" border="0" cellpadding="0" cellspacing="0">
+                                <tr>
+                                    <td class="box-border border-right width-border"></td>
+                                    <td class="box-texto text-center">
+                                        <p class="box-destaque-2">
+                                            <strong>Discutidas demandas para agilizar o dia a dia do advogado</strong>
+                                        </p>
+                                        <p class="text-center">
+                                            O presidente do Tribunal de Justiça de São Paulo, desembargador Manoel de Queiroz Pereira Calças, reuniu-se com o presidente
+                                            do Iasp, José Horácio Ribeiro, que apresentou a pauta de reivindicações da Advocacia.
+                                        </p>
+                                        <div>
+                                            <!--[if mso]>
+                                                <v:rect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="http://testetestetesteteste" style="height:40px;v-text-anchor:middle;width:120px;" stroke="f" fillcolor="#fd2236">
+                                                <w:anchorlock/>
+                                                <center>
+                                                <![endif]-->
+                                            <a href="http://testetestetesteteste" style="background-color:#fd2236;color:#ffffff;display:inline-block;font-family:'Panton-SemiBold', Helvetica Neue, Helvetica, Arial, sans-serif;font-size:14px;font-weight:bold;line-height:40px;text-align:center;text-decoration:none;width:120px;-webkit-text-size-adjust:none;">SAIBA MAIS</a>
+                                            <!--[if mso]>
+                                                </center>
+                                                </v:rect>
+                                            <![endif]-->
+                                        </div>
+                                        <br/>
+                                    </td>
+                                    <td class="box-border border-right width-border"></td>
+                                    <td class="box-space"></td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <table align="center" border="0" cellpadding="0" cellspacing="0">
+                                <tr>
+                                    <td class="box-space"></td>
+                                    <td class="box-border border-top"></td>
+                                    <td class="box-space"></td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <!-- chamada 1 -->
+
+        <tr>
+            <td class="divider">
+                &nbsp;
+            </td>
+        </tr>
+
+        <!-- box-secondary box-2 -->
+        <tr>
+            <td>
+                <table align="center" border="0" cellpadding="0" cellspacing="0" class="box box-secondary foto-left box-2">
+                    <tr>
+                        <td class="box-space"></td>
+                        <td class="box-foto-destaque">
+                            <img src="https://esquadriasinova.com.br/teste-iasp/2018/julho/foto-2.jpg" alt="">
+                        </td>
+                        <td>
+                            <table align="center" border="0" cellpadding="0" cellspacing="0">
+                                <tr>
+                                    <td>
+                                        <table align="center" border="0" cellpadding="0" cellspacing="0">
+                                            <tr>
+                                                <td class="box-border border-bottom"></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td>
+                                        <table align="center" border="0" cellpadding="0" cellspacing="0">
+                                            <tr>
+                                                <td class="box-texto text-center">
+                                                    <div class="hidden-max">
+                                                        <p class="box-destaque-2">
+                                                            <strong>Presidente do TRF4 defende “liberdade de não ter medo”</strong>
+                                                        </p>
                                                         <p class="text-center">
-                                                            <strong class="font-black-italic">
-                                                                <em>
-                                                                    Novo canal de comunicação com a sociedade e o público jurídico
-                                                                </em>
-                                                            </strong>
+                                                            O desembargador federal Carlos Eduardo Thompson Flores Lenz deu uma aula de história ao falar sobre legislação eleitoral
+                                                            e Suprema Corte. Segundo o presidente do Iasp, José Horácio Ribeiro,
+                                                            ele é “uma das personalidades mais cultas que tive oportunidade
+                                                            de conviver”.
                                                         </p>
-                                                        <p class="fs-14 font-regular">
-                                                            José Horácio Ribeiro,
-                                                            <em class="font-italic">Presidente do Iasp</em>
+                                                    </div>
+
+                                                    <div>
+                                                        <!--[if mso]>
+                                                          <v:rect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="http://testetestetesteteste" style="height:40px;v-text-anchor:middle;width:120px;" stroke="f" fillcolor="#fd2236">
+                                                            <w:anchorlock/>
+                                                            <center>
+                                                          <![endif]-->
+                                                        <a href="http://testetestetesteteste" style="background-color:#fd2236;color:#ffffff;display:inline-block;font-family:'Panton-SemiBold', Helvetica Neue, Helvetica, Arial, sans-serif;font-size:14px;font-weight:bold;line-height:40px;text-align:center;text-decoration:none;width:120px;-webkit-text-size-adjust:none;">SAIBA MAIS</a>
+                                                        <!--[if mso]>
+                                                            </center>
+                                                          </v:rect>
+                                                        <![endif]-->
+                                                    </div>
+                                                    <br/>
+                                                </td>
+                                                <td class="box-border border-right width-border"></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td>
+                                        <table align="center" border="0" cellpadding="0" cellspacing="0">
+                                            <tr>
+                                                <td class="box-border border-top"></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                        <td class="box-space"></td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <!-- end .box-2 -->
+
+        <tr>
+            <td class="divider">
+                &nbsp;
+            </td>
+        </tr>
+
+        <!-- box-secondary box-3 -->
+        <tr>
+            <td>
+                <table align="center" border="0" cellpadding="0" cellspacing="0" class="box box-secondary foto-left box-3">
+                    <tr>
+                        <td class="box-space"></td>
+                        <td>
+                            <table align="center" border="0" cellpadding="0" cellspacing="0">
+                                <tr>
+                                    <td>
+                                        <table align="center" border="0" cellpadding="0" cellspacing="0">
+                                            <tr>
+                                                <td class="box-border border-bottom"></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td>
+                                        <table align="center" border="0" cellpadding="0" cellspacing="0">
+                                            <tr>
+                                                <td class="box-border border-left width-border"></td>
+                                                <td class="box-texto text-center">
+                                                    <div class="hidden-max">
+                                                        <p class="box-destaque-2">
+                                                            <strong>Iasp é amicus curiae em ação sobre provedores</strong>
                                                         </p>
-                                                    </td>
-                                                </tr>
-                                            </table>
-                                        </td>
-                                        <td class="box-border border-right width-border"></td>
-                                        <td class="box-space"></td>
-                                    </tr>
-                                </table>
-                            </td>
-                        </tr>
+                                                        <p class="text-center">
+                                                            Conselho e Diretoria aprovaram o ingresso do Iasp como amicus curiae nos autos do recurso extraordinário interposto pelo
+                                                            Facebook, que questiona decisão sobre a responsabilidade civil
+                                                            dos provedores de internet e seus limites. O parecer é assinado
+                                                            pelo professor Marcel Leonardi, da FGV.
+                                                        </p>
+                                                    </div>
+                                                    <br/>
+                                                    <a href="http://www.iasp.org.br/notcias-iasp/2018/5/25/para-secretario-municipal-de-justica-sindicatos-perderam-o-contato"
+                                                        title="Saiba mais" class="btn">Saiba mais</a>
+                                                    <br/>
+                                                    <br/>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
 
-                        <tr>
-                            <td>
-                                <table align="center" border="0" cellpadding="0" cellspacing="0">
-                                    <tr>
-                                        <td class="box-space"></td>
-                                        <td class="box-border border-top"></td>
-                                        <td class="box-space"></td>
-                                    </tr>
-                                </table>
-                            </td>
-                        </tr>
-                    </table>
-                </td>
-            </tr>
-            <!-- end .box-presidente -->
+                                <tr>
+                                    <td>
+                                        <table align="center" border="0" cellpadding="0" cellspacing="0">
+                                            <tr>
+                                                <td class="box-border border-top"></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                        <td class="box-foto-destaque">
+                            <img src="https://esquadriasinova.com.br/teste-iasp/2018/julho/foto-3.jpg" alt="">
+                        </td>
+                        <td class="box-space"></td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <!-- end .box-3 -->
 
-            <tr>
-                <td class="divider"></td>
-            </tr>
+        <tr>
+            <td class="divider">
+                &nbsp;
+            </td>
+        </tr>
 
-            <!-- box-principal box-1 -->
-            <tr>
-                <td>
-                    <table align="center" border="0" cellpadding="0" cellspacing="0" class="box box-principal box-1">
-                        <tr>
-                            <td>
-                                <table align="center" border="0" cellpadding="0" cellspacing="0">
-                                    <tr>
-                                        <td class="box-space"></td>
-                                        <td class="box-border border-bottom"></td>
-                                        <td class="box-space"></td>
-                                    </tr>
-                                </table>
-                            </td>
-                        </tr>
+        <tr>
+            <td>
+                <table border="0" cellpading="0" cellspacing="0" class="group-box-50-50">
+                    <tr>
+                        <td>
+                            <table align="center" border="0" cellpadding="0" cellspacing="0" class="box box-50-50">
+                                <tr>
+                                    <td class="box-space"></td>
+                                    <td class="box-border-all box-texto text-center box-container">
+                                        <p class="text-center">
+                                            Conheça as atividades da Comissão de Direito do Trabalho, presidida por Ricardo Peake Braga
+                                        </p>
+                                    </td>
+                                    <td class="box-space"></td>
+                                    <td class="box-border-all box-texto text-center box-container">
+                                        <p class="text-center">
+                                            Iasp participa de Jogo pela Ética com palestras e debates sobre compliance no esporte
+                                        </p>
+                                    </td>
+                                    <td class="box-space"></td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
 
-                        <tr>
-                            <td class="bg-foto-principal">
-                                <table align="center" border="0" cellpadding="0" cellspacing="0">
-                                    <tr>
-                                        <td class="box-space-border"></td>
-                                        <td class="box-destaque-2 bg-white p-2">
-                                            <strong>Iasp promove o VI Colóquio Luso-brasileiro de Direito</strong>
-                                        </td>
-                                        <td class="box-space-border"></td>
-                                    </tr>
-                                </table>
-                            </td>
-                        </tr>
+                    <tr>
+                        <td class="divider">
+                            &nbsp;
+                        </td>
+                    </tr>
 
-                        <tr>
-                            <td>
-                                <table align="center" border="0" cellpadding="0" cellspacing="0">
-                                    <tr>
-                                        <td class="box-space"></td>
-                                        <td class="box-border border-left width-border"></td>
-                                        <td class="box-texto text-center">
-                                            <p class="text-center">
-                                                Durante cinco dias do mês de maio, profissionais do Direito de Portugal e do Brasil tiveram a oportunidade de debater diversos
-                                                temas jurídicos da atualidade luso-brasileira, em encontros realizados em
-                                                quatro importantes instituições de ensino superior portuguesas. A sexta versão
-                                                deve gerar novos frutos em breve.
-                                            </p>
-                                            <br/>
-                                            <a href="http://www.iasp.org.br/notcias-iasp/iasp-promove-o-vi-coloquio-luso-brasileiro-de-direito" title="Saiba mais" class="btn">Saiba mais</a>
-                                            <br/>
-                                            <br/>
-                                        </td>
-                                        <td class="box-border border-right width-border"></td>
-                                        <td class="box-space"></td>
-                                    </tr>
-                                </table>
-                            </td>
-                        </tr>
+                    <tr>
+                        <td>
+                            <table align="center" border="0" cellpadding="0" cellspacing="0" class="box box-50-50">
+                                <tr>
+                                    <td class="box-space"></td>
+                                    <td class="box-border-all box-texto text-center box-container">
+                                        <p class="text-center">
+                                            Colégio de presidentes comemora 101 anos e discute o Supremo Tribunal Federal
+                                        </p>
+                                    </td>
+                                    <td class="box-space"></td>
+                                    <td class="box-border-all box-texto text-center box-container">
+                                        <p class="text-center">
+                                            Celso Lafer agraciado com o Colardo Mérito Judiciário do Tribunalde Justiça de São Paulo
+                                        </p>
+                                    </td>
+                                    <td class="box-space"></td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="divider">
+                            &nbsp;
+                        </td>
+                    </tr>
 
-                        <tr>
-                            <td>
-                                <table align="center" border="0" cellpadding="0" cellspacing="0">
-                                    <tr>
-                                        <td class="box-space"></td>
-                                        <td class="box-border border-top"></td>
-                                        <td class="box-space"></td>
-                                    </tr>
-                                </table>
-                            </td>
-                        </tr>
-                    </table>
-                </td>
-            </tr>
-            <!-- end .box-principal -->
+                    <tr>
+                        <td>
+                            <table align="center" border="0" cellpadding="0" cellspacing="0" class="box box-50-50" style="table-layout: fixed;">
+                                <tr>
+                                    <td class="box-space"></td>
+                                    <td class="box-border border-top border-left border-right text-center box-container">
+                                        <img src="https://esquadriasinova.com.br/teste-iasp/logo-editora-branco.jpg" alt="Logo Editora IASP">
+                                    </td>
+                                    <td class="box-space"></td>
+                                    <td class="box-border border-top border-left border-right box-texto text-center box-container" style="width: 267px">
+                                        <img src="https://esquadriasinova.com.br/teste-iasp/2018/julho/logo-ajufe.jpg" alt="Logo Ajufe" style="width: 200px;">
+                                    </td>
+                                    <td class="box-space"></td>
+                                </tr>
+                                <tr>
+                                    <td class="box-space"></td>
+                                    <td class="box-border border-bottom border-left border-right box-texto text-center box-container">
+                                        <p class="text-center">
+                                            Noite de autógrafos da Editora Iasp, ocorrido na unidade Paulista, é um sucesso
+                                        </p>
+                                    </td>
+                                    <td class="box-space"></td>
+                                    <td class="box-border border-bottom border-left border-right box-texto text-center box-container">
+                                        <p class="text-center">
+                                            Iasp prestigia posse do novo presidente da Ajufe, Fernando Mendes
+                                        </p>
+                                    </td>
+                                    <td class="box-space"></td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
 
-            <tr>
-                <td class="divider"></td>
-            </tr>
+        <tr>
+            <td>
+                <table border="0" cellpading="0" cellspacing="0" class="box-50-50-responsive">
+                    <tr>
+                        <td>
+                            <table align="center" border="0" cellpadding="0" cellspacing="0" class="box">
+                                <tr>
+                                    <td class="box-space"></td>
+                                    <td class="box-border-all box-texto text-center box-container">
+                                        <p class="text-center">
+                                            Conheça as atividades da Comissão de Direito do Trabalho, presidida por Ricardo Peake Braga
+                                        </p>
+                                    </td>
+                                    <td class="box-space"></td>
+                                </tr>
 
-            <!-- box-secondary box-2 -->
-            <tr>
-                <td>
-                    <table align="center" border="0" cellpadding="0" cellspacing="0" class="box box-secondary foto-left box-2">
-                        <tr>
-                            <td class="box-space"></td>
-                            <td>
-                                <img src="./images/foto-2.jpg" alt="">
-                            </td>
-                            <td>
-                                <table align="center" border="0" cellpadding="0" cellspacing="0">
-                                    <tr>
-                                        <td>
-                                            <table align="center" border="0" cellpadding="0" cellspacing="0">
-                                                <tr>
-                                                    <td class="box-border border-bottom"></td>
-                                                </tr>
-                                            </table>
-                                        </td>
-                                    </tr>
+                                <tr>
+                                    <td class="divider">
+                                        &nbsp;
+                                    </td>
+                                </tr>
 
-                                    <tr>
-                                        <td>
-                                            <table align="center" border="0" cellpadding="0" cellspacing="0">
-                                                <tr>
-                                                    <td class="box-texto text-center">
-                                                        <div class="hidden-max">
-                                                            <p class="box-destaque-2">
-                                                                <strong>Marco Aurélio Mello, recebe prêmio de Direitos Humanos</strong>
-                                                            </p>
-                                                            <p class="text-center">
-                                                                No dia 18 de maio, a Comissão de Direitos Humanos do Iasp teve a honra de agraciar o Ministro do STF, Marco Aurélio Mello,
-                                                                com o 1º prêmio de Direitos Humanos. O concorrido evento
-                                                                contou com a presença do também Ministro do STF, Alexandre
-                                                                de Moraes.
-                                                            </p>
-                                                        </div>
-                                                        <br/>
-                                                        <a href="http://www.iasp.org.br/notcias-iasp/iasp-homenageia-o-ministro-marco-aurelio-mello-do-stf" title="Saiba mais" class="btn">Saiba mais</a>
-                                                        <br/>
-                                                        <br/>
-                                                    </td>
-                                                    <td class="box-border border-right width-border"></td>
-                                                </tr>
-                                            </table>
-                                        </td>
-                                    </tr>
+                                <tr>
+                                    <td class="box-space"></td>
+                                    <td class="box-border-all box-texto text-center box-container">
+                                        <p class="text-center">
+                                            Iasp participa de Jogo pela Ética com palestras e debates sobre compliance no esporte
+                                        </p>
+                                    </td>
+                                    <td class="box-space"></td>
+                                </tr>
 
-                                    <tr>
-                                        <td>
-                                            <table align="center" border="0" cellpadding="0" cellspacing="0">
-                                                <tr>
-                                                    <td class="box-border border-top"></td>
-                                                </tr>
-                                            </table>
-                                        </td>
-                                    </tr>
-                                </table>
-                            </td>
-                            <td class="box-space"></td>
-                        </tr>
-                    </table>
-                </td>
-            </tr>
-            <!-- end .box-2 -->
+                                <tr>
+                                    <td class="divider">
+                                        &nbsp;
+                                    </td>
+                                </tr>
 
-            <tr>
-                <td class="divider"></td>
-            </tr>
+                                <tr>
+                                    <td class="box-space"></td>
+                                    <td class="box-border-all box-texto text-center box-container">
+                                        <p class="text-center">
+                                            Colégio de presidentes comemora 101 anos e discute o Supremo Tribunal Federal
+                                        </p>
+                                    </td>
+                                    <td class="box-space"></td>
+                                </tr>
 
-            <!-- box-secondary box-3 -->
-            <tr>
-                <td>
-                    <table align="center" border="0" cellpadding="0" cellspacing="0" class="box box-secondary foto-left box-3">
-                        <tr>
-                            <td class="box-space"></td>
-                            <td>
-                                <table align="center" border="0" cellpadding="0" cellspacing="0">
-                                    <tr>
-                                        <td>
-                                            <table align="center" border="0" cellpadding="0" cellspacing="0">
-                                                <tr>
-                                                    <td class="box-border border-bottom"></td>
-                                                </tr>
-                                            </table>
-                                        </td>
-                                    </tr>
+                                <tr>
+                                    <td class="divider">
+                                        &nbsp;
+                                    </td>
+                                </tr>
 
-                                    <tr>
-                                        <td>
-                                            <table align="center" border="0" cellpadding="0" cellspacing="0">
-                                                <tr>
-                                                    <td class="box-border border-left width-border"></td>
-                                                    <td class="box-texto text-center">
-                                                        <div class="hidden-max">
-                                                            <p class="box-destaque-2">
-                                                                <strong>Rizek detalha ações da Prefeitura em reunião-almoço</strong>
-                                                            </p>
-                                                            <p class="text-center">
-                                                                Além de falar sobre a paralisação dos caminhoneiros, o secretário municipal de Justiça de São Paulo, Rubens Rizek Jr, detalhou
-                                                                medidas tomadas para agilizar os processos relacionados à
-                                                                cidade.
-                                                            </p>
-                                                        </div>
-                                                        <br/>
-                                                        <a href="http://www.iasp.org.br/notcias-iasp/2018/5/25/para-secretario-municipal-de-justica-sindicatos-perderam-o-contato"
-                                                            title="Saiba mais" class="btn">Saiba mais</a>
-                                                        <br/>
-                                                        <br/>
-                                                    </td>
-                                                </tr>
-                                            </table>
-                                        </td>
-                                    </tr>
+                                <tr>
+                                    <td class="box-space"></td>
+                                    <td class="box-border-all box-texto text-center box-container">
+                                        <p class="text-center">
+                                            Celso Lafer agraciado com o Colardo Mérito Judiciário do Tribunalde Justiça de São Paulo
+                                        </p>
+                                    </td>
+                                    <td class="box-space"></td>
+                                </tr>
 
-                                    <tr>
-                                        <td>
-                                            <table align="center" border="0" cellpadding="0" cellspacing="0">
-                                                <tr>
-                                                    <td class="box-border border-top"></td>
-                                                </tr>
-                                            </table>
-                                        </td>
-                                    </tr>
-                                </table>
-                            </td>
-                            <td>
-                                <img src="./images/foto-3.jpg" alt="">
-                            </td>
-                            <td class="box-space"></td>
-                        </tr>
-                    </table>
-                </td>
-            </tr>
-            <!-- end .box-3 -->
+                                <tr>
+                                    <td class="divider">
+                                        &nbsp;
+                                    </td>
+                                </tr>
 
-            <tr>
-                <td class="divider"></td>
-            </tr>
+                                <tr>
+                                    <td class="box-space"></td>
+                                    <td class="box-border-all box-texto text-center box-container">
+                                        <img src="https://esquadriasinova.com.br/teste-iasp/logo-editora-branco.jpg" alt="Logo Editora IASP">
 
-            <tr>
-                <td>
-                    <table align="center" border="0" cellpadding="0" cellspacing="0" class="box box-50-50">
-                        <tr>
-                            <td class="box-space"></td>
-                            <td class="box-border-all box-texto text-center box-container">
-                                <p class="text-center">
-                                    Conheça as atividades da Comissão de Direito Administrativo do Iasp, presidida pelo professor Sérgio Ferraz
-                                </p>
-                                <br/>
-                                <a href="http://www.iasp.org.br/notcias-iasp/comissao-de-direito-administrativo-promove-curso-gratuito-para-academicos" title="Saiba mais"
-                                    class="btn">Saiba mais</a>
-                                <br/>
-                                <br/>
-                            </td>
-                            <td class="box-space"></td>
-                            <td class="box-border-all box-texto text-center box-container">
-                                <p class="text-center">
-                                    A obrigatoriedade da impressão de votos nas eleições foi debatida durante a reunião do Conselho do Iasp de maio
-                                </p>
-                                <br/>
-                                <a href="http://www.iasp.org.br/notcias-iasp/reuniao-do-conselho-do-iasp-discute-impressao-de-votos" title="Saiba mais" class="btn">Saiba mais</a>
-                                <br/>
-                                <br/>
-                            </td>
-                            <td class="box-space"></td>
-                        </tr>
-                    </table>
-                </td>
-            </tr>
+                                        <p class="text-center">
+                                            Noite de autógrafos da Editora Iasp, ocorrido na unidade Paulista, é um sucesso
+                                        </p>
+                                    </td>
+                                    <td class="box-space"></td>
+                                </tr>
 
-            <tr>
-                <td class="divider"></td>
-            </tr>
+                                <tr>
+                                    <td class="divider">
+                                        &nbsp;
+                                    </td>
+                                </tr>
 
-            <!-- box-editora -->
-            <tr>
-                <td class="box box-editora">
-                    <a href="http://www.iasp.org.br/notcias-iasp/2018/6/14/editora-iasp-lana-cinco-publicaes-com-temas-de-diversas-reas-do-direito"
-                        title="Editora IASP">
-                        <table align="center" border="0" cellpadding="0" cellspacing="0">
-                            <tr>
-                                <td class="box-space"></td>
-                                <td class="box-border-all">
-                                    <table align="center" border="0" cellpadding="0" cellspacing="0">
-                                        <tr>
-                                            <td class="logo-editora">
-                                                <img src="./images/logo-editora-branco.jpg" alt="Logo Editora IASP">
-                                            </td>
-                                            <td class="p-2 text-editora">
-                                                <p class="text-upper txt-1">
-                                                    <strong>
-                                                        <em>Editora IASP</em>
-                                                    </strong>
-                                                </p>
-                                                <p class="text-upper txt-2">
-                                                    <em>lança cinco novos títulos</em>
-                                                </p>
-                                            </td>
-                                        </tr>
-                                    </table>
-                                </td>
-                                <td class="box-space"></td>
-                            </tr>
-                        </table>
-                    </a>
-                </td>
-            </tr>
-            <!-- end .box-editora -->
+                                <tr>
+                                    <td class="box-space"></td>
+                                    <td class="box-border-all box-texto text-center box-container">
+                                        <img src="https://esquadriasinova.com.br/teste-iasp/2018/julho/logo-ajufe.jpg" alt="Logo Ajufe" style="width: 200px;">
 
-            <tr>
-                <td class="divider"></td>
-            </tr>
+                                        <p class="text-center">
+                                            Iasp prestigia posse do novo presidente da Ajufe, Fernando Mendes
+                                        </p>
+                                    </td>
+                                    <td class="box-space"></td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
 
-            <!-- box-proximos-eventos -->
-            <tr>
-                <td class="box box-proximos-eventos box-50-50">
-                    <a href="http://www.iasp.org.br/notcias-iasp/veja-os-proximos-cursos-e-eventos-do-iasp" title="Veja os próximos eventos e cursos oferecidos em nossas unidades">
-                        <table align="center" border="0" cellpadding="0" cellspacing="0">
-                            <tr>
-                                <td class="box-space"></td>
-                                <td class="bg-color-4 p-2 text-right box-container txt">
-                                    <strong>
-                                        <em>
-                                            Veja os próximos eventos e cursos oferecidos em nossas unidades
-                                        </em>
-                                    </strong>
-                                </td>
-                                <td class="bg-color-4 box-space"></td>
-                                <td class="bg-color-4 text-center box-container">
-                                    <img src="./images/lupa.jpg" alt="buscar">
-                                </td>
-                                <td class="box-space"></td>
-                            </tr>
-                        </table>
-                    </a>
-                </td>
-            </tr>
-            <!-- end .box-proximos-eventos -->
+                </table>
+            </td>
+        </tr>
 
-            <tr>
-                <td>
-                    <div class="line-footer"></div>
-                </td>
-            </tr>
+        <tr>
+            <td class="divider">
+                &nbsp;
+            </td>
+        </tr>
 
-            <tr>
-                <td class="text-center">
-                    <table align="center" border="0" cellpadding="0" cellspacing="0" class="social-medias" width="auto">
-                        <tr>
-                            <td>
-                                <a href="https://www.facebook.com/iaspnamidia/" title="Facebook IASP">
-                                    <img src="./images/social-media-facebook.jpg" alt="facebook">
-                                </a>
-                            </td>
-                            <td>
-                                <a href="https://www.instagram.com/iasp1874/" title="Instagram IASP">
-                                    <img src="./images/social-media-instagram.jpg" alt="instagram">
-                                </a>
-                            </td>
-                            <td>
-                                <a href="https://twitter.com/iaspnamidia" title="Twitter IASP">
-                                    <img src="./images/social-media-twitter.jpg" alt="twitter">
-                                </a>
-                            </td>
-                        </tr>
-                    </table>
+        <tr>
+            <td>
+                <div class="line-footer"></div>
+            </td>
+        </tr>
 
-                    <br/>
-                </td>
-            </tr>
+        <tr>
+            <td class="text-center">
+                <table align="center" border="0" cellpadding="0" cellspacing="0" class="social-medias" width="auto">
+                    <tr>
+                        <td>
+                            <a href="https://www.facebook.com/iaspnamidia/" title="Facebook IASP">
+                                <img src="https://esquadriasinova.com.br/teste-iasp/social-media-facebook.jpg" alt="facebook">
+                            </a>
+                        </td>
+                        <td>
+                            <a href="https://www.instagram.com/iasp1874/" title="Instagram IASP">
+                                <img src="https://esquadriasinova.com.br/teste-iasp/social-media-instagram.jpg" alt="instagram">
+                            </a>
+                        </td>
+                        <td>
+                            <a href="https://twitter.com/iaspnamidia" title="Twitter IASP">
+                                <img src="https://esquadriasinova.com.br/teste-iasp/social-media-twitter.jpg" alt="twitter">
+                            </a>
+                        </td>
+                    </tr>
+                </table>
 
-        </tbody>
+                <br/>
+            </td>
+        </tr>
+
     </table>
 </body>
 
