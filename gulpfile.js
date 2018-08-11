@@ -104,7 +104,7 @@ gulp.task('html', function () {
         .pipe(inlineCss({
             applyLinkTags: true,
             removeLinkTags: true,
-            applyStyleTags: false,
+            applyStyleTags: true,
             removeStyleTags: false,
             applyWidthAttributes: false,
             applyTableAttributes: false,
@@ -126,7 +126,7 @@ gulp.task('clean', function () {
 gulp.task('build', function () {
     sequence('clean', [
         'html',
-        'css',
+        // 'css',
         'img',
         'fonts'
     ]);

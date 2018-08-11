@@ -113,6 +113,10 @@ table {
     background-size: 100%;
     height: 220px;
     vertical-align: bottom;
+
+    .news-2018-agosto & {
+      height: 380px;
+    }
   }
   
   &.box-secondary .foto-destaque img {
@@ -217,6 +221,13 @@ table {
   }
 }
 
+.box-chamada-vermelho {
+  .box-texto {
+    background-color: #fd2236;
+    color: #ffffff;
+  }
+}
+
 .box-proximos-eventos {
   td {
     padding-top: 5px;
@@ -251,7 +262,7 @@ table {
 
 @media screen and (max-width: 650px) {
   .table-main {
-    width: 100%;
+    width: 100% !important;
   }
 
   .box.box-presidente {
@@ -323,5 +334,18 @@ table {
   
   .box .bg-foto-principal {
     height: 150px !important;
+    
+    .news-2018-agosto & {
+      height: 280px !important;
+    }
+  }
+}
+
+
+@media screen and (max-width: 360px) {
+  .box .bg-foto-principal {    
+    .news-2018-agosto & {
+      height: 210px !important;
+    }
   }
 }
