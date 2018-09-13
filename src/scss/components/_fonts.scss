@@ -5,13 +5,15 @@
     @font-face {
         font-family: '#{$nome}';
         // src: url('#{$diretorio}#{$nome}.otf');
-        src: url('#{$diretorio}#{$nome}.otf') format("opentype");
-        // src: url('#{$diretorio}#{$nome}.eot?#iefix') format('embedded-opentype'),
+        src: url('#{$diretorio}#{$nome}.otf') format('truetype');
+        src: url('#{$diretorio}#{$nome}.otf?#iefix') format('embedded-opentype');
         //      url('#{$diretorio}#{$nome}.woff2') format('woff2'),
         //      url('#{$diretorio}#{$nome}.woff') format('woff'),
         //      url('#{$diretorio}#{$nome}.otf') format('truetype'),
         //      url('#{$diretorio}#{$nome}.svg') format('svg');
         // src: url('#{$diretorio}#{$nome}.otf') format('truetype');
+        font-weight: normal;
+        font-style: normal;
     }
 }
 
@@ -19,9 +21,9 @@
   font-family: '#{$font-regular}', #{$font-outras}; 
 }
 
-// .font-bold {
-//   font-family: '#{$font-bold}', #{$font-outras}; 
-// }
+.font-bold {
+  font-family: '#{$font-bold}', #{$font-outras}; 
+}
 
 .font-italic {
   font-family: '#{$font-italic}', #{$font-outras}; 
@@ -44,7 +46,9 @@
 // }
 
 .font-black-italic {
-  font-family: '#{$font-black-italic}', #{$font-outras}; 
+  font-family: '#{$font-black-italic}', #{$font-outras};
+  font-weight: bold;
+  font-style: normal;
 }
 
 strong, b {

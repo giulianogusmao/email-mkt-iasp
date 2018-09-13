@@ -17,8 +17,8 @@ $fontes: (
   "SemiBold",
   "SemiBoldItalic",
   // "BlackCaps",
-  "BlackitalicCaps"
-  // "ExtraBold"
+  "BlackItalic",
+  "ExtraBold"
 );
 
 $font-extra-light: '#{$family}-ExtraLightItalic';
@@ -26,8 +26,8 @@ $font-extra-light: '#{$family}-ExtraLightItalic';
 $font-regular: '#{$family}-SemiBold';
 $font-italic: '#{$family}-SemiBoldItalic';
 // $font-black: '#{$family}-BlackCaps';
-$font-black-italic: '#{$family}-BlackitalicCaps';
-// $font-bold: '#{$family}-ExtraBold';
+$font-black-italic: '#{$family}-BlackItalic';
+$font-bold: '#{$family}-ExtraBold';
 $font-outras: 'Helvetica Neue, Helvetica, Arial, sans-serif';
 
 // fonts size
