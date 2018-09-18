@@ -6,7 +6,7 @@
         font-family: '#{$nome}';
         // src: url('#{$diretorio}#{$nome}.otf');
         src: url('#{$diretorio}#{$nome}.otf') format('truetype');
-        src: url('#{$diretorio}#{$nome}.otf?#iefix') format('embedded-opentype');
+        // src: url('#{$diretorio}#{$nome}.otf?#iefix') format('embedded-opentype');
         //      url('#{$diretorio}#{$nome}.woff2') format('woff2'),
         //      url('#{$diretorio}#{$nome}.woff') format('woff'),
         //      url('#{$diretorio}#{$nome}.otf') format('truetype'),
