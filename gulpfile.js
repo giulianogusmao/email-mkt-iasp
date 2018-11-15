@@ -1,6 +1,7 @@
 var gulp = require('gulp'),
     browserSync = require('browser-sync'),
     sass = require('gulp-sass'),
+    replace = require('gulp-replace'),
     autoprefixer = require('gulp-autoprefixer'),
     cleanCSS = require('gulp-clean-css'),
     uglify = require('gulp-uglify'),
@@ -33,7 +34,9 @@ var config = {
     assets: 'src/assets/**/*.{js,css,jpg,jpeg,png,gif,ttf,woff,woff2,eot,eof,otf,svg}',
     assetsout: 'dist/assets/',
     fonts: 'src/fonts/**/*.{ttf,woff,woff2,eot,eof,otf,svg}',
-    fontsout: 'dist/fonts/'
+    fontsout: 'dist/fonts/',
+    imagein: './images/',
+    imageout: 'https://www.iaspnews.com.br/images/',
 };
 
 gulp.task('reload', function () {
@@ -98,6 +101,7 @@ gulp.task('html', function () {
         //     'css': config.cssreplaceout,
         //     'js': config.jsreplaceout,
         // }))
+        .pipe(replace(config.imagein, config.imageout))
         .pipe(inlinesource({
             compress: true
         }))
