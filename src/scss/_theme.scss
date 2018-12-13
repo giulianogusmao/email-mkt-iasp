@@ -1,5 +1,5 @@
 $color-1: #fd2236;
-$color-2: #da2838;
+$color-2: #dd2331;
 $color-3: #b2b2b2;
 $color-4: #dfdfdf;
 $color-5: #fff;
@@ -41,7 +41,7 @@ a, a:hover, a:focus, a:visited {
     letter-spacing: .1em;
     text-transform: uppercase;
     text-decoration: none;
-    background-color: $color-1;
+    background-color: $color-2;
     color: #FFF;
     white-space: nowrap;
     @extend .font-regular;
@@ -51,7 +51,7 @@ a, a:hover, a:focus, a:visited {
   display: block;
   height: 5px;
   width: 100%;
-  background-color: $color-1;
+  background-color: $color-2;
   margin-top: 8px;
 }
 
