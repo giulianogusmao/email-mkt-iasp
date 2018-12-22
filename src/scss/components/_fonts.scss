@@ -29,6 +29,10 @@
   font-family: '#{$font-italic}', #{$font-outras}; 
 }
 
+.font-light {
+  font-family: '#{$font-light}', #{$font-outras};   
+}
+
 .font-extra-light {
   font-family: '#{font-extra-light}', #{$font-outras}; 
 }

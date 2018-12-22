@@ -14,6 +14,7 @@ $family: "Panton";
 $fontes: (
   // "ExtraLightItalic",
   // "LightitalicCaps",
+  "LightItalic",
   "SemiBold",
   "SemiBoldItalic",
   // "BlackCaps",
@@ -22,6 +23,7 @@ $fontes: (
 );
 
 $font-extra-light: '#{$family}-ExtraLightItalic';
+$font-light: '#{$family}-LightItalic';
 // $font-light: '#{$family}-LightitalicCaps';
 $font-regular: '#{$family}-SemiBold';
 $font-italic: '#{$family}-SemiBoldItalic';

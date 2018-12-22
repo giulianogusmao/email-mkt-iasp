@@ -96,6 +96,11 @@ table {
   margin: 10px 0;
 }
 
+.img-responsive {
+  width: 100%; 
+  height: auto;
+}
+
 .box {
 
   .box-destaque {
@@ -265,7 +270,7 @@ table {
 }
 
 
-.box-50-50-responsive {
+.box-50-50-responsive, .show-mobile {
   display: none;
 }
 
@@ -303,11 +308,11 @@ table {
     max-height: none;
   }
 
-  .group-box-50-50 {
+  .group-box-50-50, .show-desktop {
     display: none;
   } 
 
-  .box-50-50-responsive {
+  .box-50-50-responsive, .show-mobile {
     display: table !important;
   }
 
