@@ -4,16 +4,13 @@
 
     @font-face {
         font-family: '#{$nome}';
-        // src: url('#{$diretorio}#{$nome}.otf');
-        src: url('#{$diretorio}#{$nome}.otf') format('truetype');
-        // src: url('#{$diretorio}#{$nome}.otf?#iefix') format('embedded-opentype');
-        //      url('#{$diretorio}#{$nome}.woff2') format('woff2'),
-        //      url('#{$diretorio}#{$nome}.woff') format('woff'),
-        //      url('#{$diretorio}#{$nome}.otf') format('truetype'),
-        //      url('#{$diretorio}#{$nome}.svg') format('svg');
-        // src: url('#{$diretorio}#{$nome}.otf') format('truetype');
+        src: url("#{$diretorio}#{$nome}.eot"); /* IE9 Compat Modes */
+        src: url("#{$diretorio}#{$nome}.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
+             url("#{$diretorio}#{$nome}.woff") format("woff"), /* Modern Browsers */
+             url("#{$diretorio}#{$nome}.ttf")  format("truetype"); /* Safari, Android, iOS */
+            //  url("#{$diretorio}#{$nome}.svg##{$nome}") format("svg"); /* Legacy iOS */
         font-weight: normal;
-        font-style: normal;
+        font-style: normal;        
     }
 }
 

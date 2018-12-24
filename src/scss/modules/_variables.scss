@@ -1,5 +1,4 @@
-﻿
-// =============================================================================================
+﻿// =============================================================================================
 // PASTAS
 
 $url-path-assets: "assets/";
@@ -12,49 +11,48 @@ $url-path-image: "img/";
 $url-path-fontes: "https://www.iaspnews.com.br/fonts"; // desenvolvimento
 $family: "Panton";
 $fontes: (
-  // "ExtraLightItalic",
+  "ExtraLightItalic",
   // "LightitalicCaps",
   "LightItalic",
   "SemiBold",
   "SemiBoldItalic",
   // "BlackCaps",
-  "BlackItalic",
+    "BlackItalic",
   "ExtraBold"
 );
 
-$font-extra-light: '#{$family}-ExtraLightItalic';
-$font-light: '#{$family}-LightItalic';
+$font-extra-light: "#{$family}-ExtraLightItalic";
+$font-light: "#{$family}-LightItalic";
 // $font-light: '#{$family}-LightitalicCaps';
-$font-regular: '#{$family}-SemiBold';
-$font-italic: '#{$family}-SemiBoldItalic';
+$font-regular: "#{$family}-SemiBold";
+$font-italic: "#{$family}-SemiBoldItalic";
 // $font-black: '#{$family}-BlackCaps';
-$font-black-italic: '#{$family}-BlackItalic';
-$font-bold: '#{$family}-ExtraBold';
-$font-outras: 'Helvetica Neue, Helvetica, Arial, sans-serif';
+$font-black-italic: "#{$family}-BlackItalic";
+$font-bold: "#{$family}-ExtraBold";
+$font-outras: "Helvetica Neue, Helvetica, Arial, sans-serif";
 
 // fonts size
 $font-size-reset: 62.5% !default;
 $font-size: 1.5rem !default;
 
-$project-name: 'table-main';
-
+$project-name: "table-main";
 
 // =============================================================================================
 // CORES
 
 // escala de cinza
-$cor-black-1:   #000000;
+$cor-black-1: #000000;
 $cor-black-900: #212121;
 $cor-black-800: #424242;
 $cor-black-700: #616161;
 $cor-black-600: #757575;
-$cor-black-500: #9E9E9E;
-$cor-black-400: #BDBDBD;
-$cor-black-300: #E0E0E0;
-$cor-black-200: #EEEEEE;
-$cor-black-100: #F5F5F5;
-$cor-black-50:  #FAFAFA;
-$cor-black-0:   #FFFFFF;
+$cor-black-500: #9e9e9e;
+$cor-black-400: #bdbdbd;
+$cor-black-300: #e0e0e0;
+$cor-black-200: #eeeeee;
+$cor-black-100: #f5f5f5;
+$cor-black-50: #fafafa;
+$cor-black-0: #ffffff;
 $cor-white: $cor-black-0;
 
 // cores telefonica
@@ -88,7 +86,6 @@ $cor-bootstrap-danger: #d9534f;
 $cor-bootstrap-warning: #f0ad4e;
 $cor-bootstrap-info: #5bc0de;
 $cor-bootstrap-success: #5cb85c;
-
 // cores tema
 $cor-dark: $cor-black-800;
 $cor-light: $cor-black-200;
@@ -97,7 +94,6 @@ $cor-danger: $cor-bootstrap-danger;
 $cor-warning: $cor-bootstrap-warning;
 $cor-info: $cor-bootstrap-info;
 $cor-success: $cor-bootstrap-success;
-
 // cores light
 $cor-dark-light: lighten($cor-dark, 10);
 $cor-light-light: lighten($cor-light, 10);
@@ -106,7 +102,6 @@ $cor-danger-light: lighten($cor-danger, 10);
 $cor-warning-light: lighten($cor-warning, 10);
 $cor-info-light: lighten($cor-info, 10);
 $cor-success-light: lighten($cor-success, 10);
-
 // cores dark
 $cor-dark-dark: darken($cor-dark, 10);
 $cor-light-dark: darken($cor-light, 10);
@@ -115,19 +110,14 @@ $cor-danger-dark: darken($cor-danger, 10);
 $cor-warning-dark: darken($cor-warning, 10);
 $cor-info-dark: darken($cor-info, 10);
 $cor-success-dark: darken($cor-success, 10);
-
 // cores fontes
 $cor-text: $cor-black-1 !default;
-
-$border-color: rgba(0,0,0,.125);
-$border-style: 'solid';
-$border-weight: '1px';
+$border-color: rgba(0, 0, 0, 0.125);
+$border-style: "solid";
+$border-weight: "1px";
 $border: #{$border-weight} #{$border-style} $border-color;
-
-
 // =============================================================================================
 // screen
-
 $screen-xs-max: 576px;
 $screen-sm-min: 577px;
 $screen-sm-max: 767px;
@@ -136,11 +126,7 @@ $screen-md-max: 991px;
 $screen-lg-min: 992px;
 $screen-lg-max: 1199px;
 $screen-xl-min: 1200px;
-
 $screen-max: 1400px;
-
-
-
 // menu
 $screen-menu-mobile: $screen-md-max;
 $screen-menu-desktop: $screen-lg-min;
