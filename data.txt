@@ -3,3 +3,5 @@ iasp.emailmkt@gmail.com
 
 data nasc:
 01/01/1990
+
+npm install --global --production windows-build-tools
